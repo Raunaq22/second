@@ -1,0 +1,146 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Chess_terz.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+
+    <title>Chess-ters - Online chess Website</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+    <script type="text/javascript" src="Main.js"> </script>
+
+    
+
+</head>
+<body class="main">
+
+    <form id="form2" runat="server">
+        <div>
+
+             <!--    Navigation section -->
+            <nav id="nav">
+                <ul>
+                    <li>
+                      <div class="dropdown">
+                      <button type="button" class="dropbtn" onclick=" myFunction()"><ion-icon name="home"></ion-icon> HOME
+                      <i class="fa fa-caret-down"></i>
+                      </button>
+                      <div class="dropdown-content" id="myDropdown">
+                        <a href="Default.aspx">Visit Home</a>
+                        <a href="Play.aspx">Play</a>
+                        <a href="ChessTV.aspx">Chess TV</a>
+                      </div>
+                    </div> 
+                    </li>
+                    <li>
+                       <a href="Members.aspx"><ion-icon name="people-sharp"></ion-icon> OUR MEMBERS</a>
+                     
+                    </li> 
+                    <li><a href="FAQ.aspx"><ion-icon name="information-circle-sharp"></ion-icon> FAQ</a></li>
+                    <li><a href="Products.aspx"><ion-icon name="pricetag-sharp"></ion-icon> PRODUCTS</a></li>
+                    <li><a href="AboutUs.aspx"><ion-icon name="paper-plane-sharp"></ion-icon> ABOUT US</a></li>
+                      
+                     
+                     
+                </ul>
+            </nav>
+
+             
+
+            
+            <!--    Header section -->
+
+            <header class="main">
+
+
+               
+                
+                 
+            </header>
+
+           
+                
+
+            <!--    Main Content Area -->
+            <div id="content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                   
+                
+                </asp:ContentPlaceHolder>
+            </div>
+            
+            <!--    Footer section -->
+            <footer>
+               
+                    <img class="horsey" src="images/horsey.png" height="90" width="80">
+                    <ul class="hul">
+                        <li class="hli"><a href="Default.aspx" class="aef">HOME</a></li>
+                        <li  class="hli"><a href="Play.aspx" class="aef">PLAY CHESS</a></li>
+                        <li  class="hli"><a href="Members.aspx" class="aef">OUR MEMBERS </a></li>
+                        <li  class="hli"><a href="FAQ.aspx" class="aef">FAQ</a></li>
+                        <li  class="hli"><a href="Products.aspx" class="aef">PRODUCTS</a></li>
+                        <li  class="hli"><a href="AboutUs.aspx" class="aef">ABOUT US</a></li>
+                    </ul>
+                    <div class="Reach">
+                        <span class="rspan">Reach out to us on: </span>
+                     <a href="https://www.facebook.com"><ion-icon class="lico" name="logo-facebook"></ion-icon></a>
+                     <a href="https://twitter.com/i/flow/login">   <ion-icon  class="lico" name="logo-twitter"></ion-icon></a>
+                     <a href="https://myaccount.google.com/intro/signing-in-to-google">   <ion-icon  class="lico" name="logo-google"></ion-icon></a>
+                     <a href="https://www.instagram.com">   <ion-icon  class="lico" name="logo-instagram"></ion-icon></a>
+                    </div>
+                     <br>
+                     <div class="copyright"><span>Copyright © Chess-ters private Ltd.</span></div>
+                
+
+
+
+                
+
+            </footer>
+            <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+            <script>
+                window.onscroll = function () { scrollFunction() };
+
+                function scrollFunction() {
+                    if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+                        document.getElementById("nav").style.padding = "0px 18px";
+                        document.getElementById("nav").style.backgroundColor = "#637b89";
+                        document.getElementById("nav").style.width = "100%";
+                        document.getElementById("nav").style.marginTop = "-10px";
+                        
+                        
+
+                    } else {
+                        document.getElementById("nav").style.fontSize = "16px";
+                        document.getElementById("nav").style.backgroundColor = "transparent";
+                        document.getElementById("nav").style.textDecoration = "none";
+                        document.getElementById("nav").style.marginLeft = "0%";
+                        document.getElementById("nav").style.right = "0%";
+                        document.getElementById("nav").style.marginTop = "0%";
+                        document.getElementById("nav").style.color = "white";
+                        document.getElementById("dropdown").style.color = "white";
+                        document.getElementById("nav").style.padding = "0px 15px";
+                        document.getElementById("nav").style.fontWeight = "600";
+                       
+                    }
+                }       
+            </script>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>   
+            
+        </div>
+    </form>
+</body>
+</html>
+
